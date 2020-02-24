@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kub-test-name
+spec:
+  containers:
+  - name: kub-test-docker-name
+    image: supreme2302/kub:v1
+    ports:
+    - containerPort: 8080
+      protocol: TCP

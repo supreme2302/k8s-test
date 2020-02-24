@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supreme-test-kub
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: some-selector
+  template:
+    metadata:
+      labels:
+        app: some-selector
+    spec:
+      containers:
+      - name: kub-test-docker-name
+        image: supreme2302/kub:v1
+        ports:
+        - containerPort: 8080
+          protocol: TCP
